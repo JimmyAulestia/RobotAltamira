@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/NumeroB_On_Net"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="32dp"
+        android:background="#208A0D"
+        android:ems="10"
+        android:hint="@string/Ingreso_NumeroB_On_Net"
+        android:inputType="number"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/NumeroB_Off_Net"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/NumeroB_Internacional"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:background="#423534"
+        android:ems="10"
+        android:hint="@string/Ingreso_NumeroB_Internacional"
+        android:inputType="number"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/NumeroA"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/NumeroB_Off_Net"
+        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Off_Net" />
+
+    <EditText
+        android:id="@+id/NumeroA"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="8dp"
+        android:background="#208A0D"
+        android:ems="10"
+        android:hint="@string/Ingreso_NumeroA"
+        android:inputType="number"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/NumeroB_Internacional"
+        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Internacional" />
+
+    <Button
+        android:id="@+id/Boton_SMS_ON_OFF"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:background="#919191"
+        android:text="@string/sms_on_off"
+        android:textColor="#120D0D"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/Boton_INTERNET"
+        app:layout_constraintTop_toBottomOf="@+id/Boton_Llamada_numero_B_ON_Net" />
+
+    <Button
+        android:id="@+id/Boton_Llamada_numero_B_ON_Net"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="36dp"
+        android:background="#919191"
+        android:text="@string/Llamada_numero_B_ON_Net"
+        android:textColor="#120D0D"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Boton_SMS_ON_OFF"
+        app:layout_constraintTop_toBottomOf="@+id/NumeroA" />
+
+    <EditText
+        android:id="@+id/NumeroB_Off_Net"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:background="#EA1606"
+        android:ems="10"
+        android:hint="@string/Ingreso_NumeroB_Off_Net"
+        android:inputType="number"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/NumeroB_Internacional"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/NumeroB_On_Net"
+        app:layout_constraintTop_toBottomOf="@+id/NumeroB_On_Net" />
+
+    <Button
+        android:id="@+id/Boton_Llamada_numero_B_Off_Net"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:background="#919191"
+        android:text="@string/Llamada_numero_B_Off_Net"
+        android:textColor="#120D0D"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/Boton_INTERNET" />
+
+    <Button
+        android:id="@+id/Boton_INTERNET"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:background="#919191"
+        android:text="@string/internet"
+        android:textColor="#120D0D"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/Boton_Llamada_numero_B_Off_Net"
+        app:layout_constraintTop_toBottomOf="@+id/Boton_SMS_ON_OFF" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="361dp" />
+
+    <Button
+        android:id="@+id/estado"
+        android:layout_width="111dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/boton_estado"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/Boton_prueba" />
+
+    <Button
+        android:id="@+id/Boton_prueba"
+        android:layout_width="109dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/Boton_prueba"
+        app:layout_constraintStart_toStartOf="@+id/estado"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="373dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="438dp" />
+
+    <TextView
+        android:id="@+id/FechaInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:hint="Fecha Inicio"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/estado"
+        tools:layout_editor_absoluteX="179dp" />
+
+    <TextView
+        android:id="@+id/FechaFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:hint="Fecha Fin"
+        app:layout_constraintTop_toBottomOf="@+id/FechaInicio"
+        tools:layout_editor_absoluteX="193dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
