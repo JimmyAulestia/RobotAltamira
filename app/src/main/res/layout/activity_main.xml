@@ -11,7 +11,7 @@
         android:id="@+id/NumeroB_On_Net"
         android:layout_width="0dp"
         android:layout_height="20dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="128dp"
         android:autofillHints=""
         android:background="#208A0D"
         android:ems="10"
@@ -132,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="85dp" />
+        app:layout_constraintGuide_percent="0.20190024" />
 
     <Button
         android:id="@+id/estado"
@@ -148,7 +148,7 @@
         android:id="@+id/Boton_prueba"
         android:layout_width="109dp"
         android:layout_height="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/Boton_prueba"
         app:layout_constraintStart_toStartOf="@+id/estado"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
@@ -158,13 +158,81 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="331dp" />
+        app:layout_constraintGuide_percent="0.79097384" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="438dp" />
+        app:layout_constraintGuide_begin="491dp" />
+
+    <TableLayout
+        android:layout_width="273dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/NumeroB_On_Net"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/NumeroBOnVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="@string/Ingreso_NumeroB_On_Net"
+                android:textColor="#1C1111" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/NumeroBOffVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="@string/Ingreso_NumeroB_Off_Net"
+                android:textColor="#1C1111" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/NumeroBInt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="@string/Ingreso_NumeroB_Internacional"
+                android:textColor="#1C1111" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/NumeroRobot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="@string/Ingreso_NumeroA"
+                android:textColor="#1C1111" />
+        </TableRow>
+
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
