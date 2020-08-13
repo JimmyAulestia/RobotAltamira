@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="20dp"
         android:layout_marginTop="32dp"
+        android:autofillHints=""
         android:background="#208A0D"
         android:ems="10"
         android:hint="@string/Ingreso_NumeroB_On_Net"
@@ -21,7 +22,6 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/NumeroB_Off_Net"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +40,8 @@
         app:layout_constraintBottom_toTopOf="@+id/NumeroA"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/NumeroB_Off_Net"
-        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Off_Net" />
+        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Off_Net"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/NumeroA"
@@ -56,7 +57,8 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/NumeroB_Internacional"
-        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Internacional" />
+        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Internacional"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/Boton_SMS_ON_OFF"
@@ -98,7 +100,8 @@
         app:layout_constraintBottom_toTopOf="@+id/NumeroB_Internacional"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/NumeroB_On_Net"
-        app:layout_constraintTop_toBottomOf="@+id/NumeroB_On_Net" />
+        app:layout_constraintTop_toBottomOf="@+id/NumeroB_On_Net"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/Boton_Llamada_numero_B_Off_Net"
@@ -129,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="361dp" />
+        app:layout_constraintGuide_begin="85dp" />
 
     <Button
         android:id="@+id/estado"
@@ -155,7 +158,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="373dp" />
+        app:layout_constraintGuide_begin="331dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -163,25 +166,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="438dp" />
-
-    <TextView
-        android:id="@+id/FechaInicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:hint="Fecha Inicio"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/estado"
-        tools:layout_editor_absoluteX="179dp" />
-
-    <TextView
-        android:id="@+id/FechaFin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:hint="Fecha Fin"
-        app:layout_constraintTop_toBottomOf="@+id/FechaInicio"
-        tools:layout_editor_absoluteX="193dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

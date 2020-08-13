@@ -159,8 +159,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
         ButtonPrueba = (Button) findViewById(R.id.Boton_prueba);
         ButtonPrueba.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                TextView dateView = (TextView)findViewById(R.id.FechaInicio);
-                setDate(dateView);
+//                TextView dateView = (TextView)findViewById(R.id.FechaInicio);
+//                setDate(dateView);
                 //LLAMADAS
                 EditText NumeroBOnNet = findViewById(R.id.NumeroB_On_Net);
                 if (!NumeroBOnNet.getText().toString().equals("")) {
@@ -171,8 +171,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
                     callIntent.setData(Uri.parse(uri));
                     startActivity(callIntent);
                     Log.i(TAG, "Llamada ONNET FIN");
-                    TextView dateViewOn = (TextView)findViewById(R.id.FechaFin);
-                    setDate(dateViewOn);
+                    /*TextView dateViewOn = (TextView)findViewById(R.id.FechaFin);
+                    setDate(dateViewOn);*/
                 }
 
                 try {
@@ -192,8 +192,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
                     callIntent.setData(Uri.parse(uri));
                     startActivity(callIntent);
                     Log.i(TAG, "Llamada OFFNET FIN");
-                    TextView dateViewOff = (TextView)findViewById(R.id.FechaFin);
-                    setDate(dateViewOff);
+/*                    TextView dateViewOff = (TextView)findViewById(R.id.FechaFin);
+                    setDate(dateViewOff);*/
                 }
 
 
@@ -211,8 +211,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
                     smsManager.sendTextMessage(num_telefono_off, null, message, null, null);
                     Toast.makeText(getApplicationContext(), "SMS OFF NET ENVIADO.", Toast.LENGTH_LONG).show();
 
-                    TextView dateViewSms = (TextView)findViewById(R.id.FechaFin);
-                    setDate(dateViewSms);
+/*                    TextView dateViewSms = (TextView)findViewById(R.id.FechaFin);
+                    setDate(dateViewSms);*/
                 }
                 //INTERNET
 
@@ -342,8 +342,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
                                 .setContentText("All Download completed");
                 NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 notificationManager.notify(455, mBuilder.build());
-                TextView dateViewInt = (TextView)findViewById(R.id.FechaFin);
-                setDate(dateViewInt);
+/*                TextView dateViewInt = (TextView)findViewById(R.id.FechaFin);
+                setDate(dateViewInt);*/
             }
         }
     };
