@@ -30,6 +30,7 @@
         android:layout_width="0dp"
         android:layout_height="20dp"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:background="#423534"
         android:ems="10"
         android:hint="@string/Ingreso_NumeroB_Internacional"
@@ -37,28 +38,9 @@
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/background_light"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/NumeroA"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/NumeroB_Off_Net"
-        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Off_Net"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/NumeroA"
-        android:layout_width="0dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="8dp"
-        android:background="#208A0D"
-        android:ems="10"
-        android:hint="@string/Ingreso_NumeroA"
-        android:inputType="number"
-        android:textColor="@android:color/background_light"
-        android:textColorHint="@android:color/background_light"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/NumeroB_Internacional"
-        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Internacional"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Off_Net" />
 
     <Button
         android:id="@+id/Boton_SMS_ON_OFF"
@@ -76,14 +58,14 @@
         android:id="@+id/Boton_Llamada_numero_B_ON_Net"
         android:layout_width="0dp"
         android:layout_height="39dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:background="#919191"
         android:text="@string/Llamada_numero_B_ON_Net"
         android:textColor="#120D0D"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/Boton_SMS_ON_OFF"
-        app:layout_constraintTop_toBottomOf="@+id/NumeroA" />
+        app:layout_constraintTop_toBottomOf="@+id/NumeroB_Internacional" />
 
     <EditText
         android:id="@+id/NumeroB_Off_Net"
@@ -168,8 +150,8 @@
         app:layout_constraintGuide_begin="491dp" />
 
     <TableLayout
-        android:layout_width="273dp"
-        android:layout_height="79dp"
+        android:layout_width="271dp"
+        android:layout_height="105dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/NumeroB_On_Net"
@@ -231,6 +213,17 @@
                 android:background="@drawable/border"
                 android:text="@string/Ingreso_NumeroA"
                 android:textColor="#1C1111" />
+
+            <EditText
+                android:id="@+id/NumeroA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:hint="@string/Ingreso_NumeroA"
+                android:inputType="number"
+                android:textColor="#1C1111"/>
+
+
         </TableRow>
 
     </TableLayout>
