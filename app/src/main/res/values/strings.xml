@@ -11,4 +11,6 @@
     <string name="internet">Uso Internet</string>
     <string name="Boton_prueba">Pruebas Basicas</string>
     <string name="boton_estado">Estado Abonado</string>
+    <string name="fec_inicio">Fecha Inicio</string>
+    <string name="fec_fin">Fecha Fin</string>
 </resources>

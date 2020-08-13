@@ -101,8 +101,8 @@
         app:layout_constraintGuide_begin="491dp" />
 
     <TableLayout
-        android:layout_width="271dp"
-        android:layout_height="105dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -193,7 +193,7 @@
                 android:textColor="#1C1111" />
 
             <EditText
-                android:id="@+id/NumeroA"
+                android:id="@+id/SetNumeroRobot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
@@ -201,6 +201,52 @@
                 android:inputType="number"
                 android:textColor="#1C1111" />
 
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/fec_inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="@string/fec_inicio"
+                android:textColor="#1C1111" />
+
+            <EditText
+                 android:id="@+id/ShowFecInicio"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/border"
+                 android:inputType="number"
+                 android:textColor="#1C1111" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/fec_fin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="@string/fec_fin"
+                android:textColor="#1C1111" />
+
+            <EditText
+                android:id="@+id/ShowFecFin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:inputType="number"
+                android:textColor="#1C1111" />
 
         </TableRow>
 

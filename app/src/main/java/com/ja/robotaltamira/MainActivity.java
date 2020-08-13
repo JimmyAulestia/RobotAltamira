@@ -58,6 +58,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
     String message;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +67,6 @@ public class MainActivity<TAG> extends AppCompatActivity {
         downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
         registerReceiver(onComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
         Download_Uri = Uri.parse("http://ipv4.download.thinkbroadband.com/10MB.zip");
-
         setupPermissions();
         Log.i(TAG, "INICIO PRUEBAS BASICAS");
 
@@ -159,8 +159,10 @@ public class MainActivity<TAG> extends AppCompatActivity {
         ButtonPrueba = (Button) findViewById(R.id.Boton_prueba);
         ButtonPrueba.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-//                TextView dateView = (TextView)findViewById(R.id.FechaInicio);
-//                setDate(dateView);
+                TextView FechaInicio = (TextView)findViewById(R.id.ShowFecInicio);
+                setDate(FechaInicio);
+                TextView FechaFin = (TextView)findViewById(R.id.ShowFecFin);
+
                 //LLAMADAS
                 EditText NumeroBOnNet = findViewById(R.id.NumeroB_On_Net);
                 if (!NumeroBOnNet.getText().toString().equals("")) {
@@ -171,17 +173,15 @@ public class MainActivity<TAG> extends AppCompatActivity {
                     callIntent.setData(Uri.parse(uri));
                     startActivity(callIntent);
                     Log.i(TAG, "Llamada ONNET FIN");
-                    /*TextView dateViewOn = (TextView)findViewById(R.id.FechaFin);
-                    setDate(dateViewOn);*/
                 }
 
                 try {
                     Log.i(TAG, "Sleep iniciado");
-                    Thread.sleep(40000);
+                    Thread.sleep(20000);
                     Log.i(TAG, "Sleep finalizado");
                 } catch (Exception e) {
                 }
-                Log.i(TAG, "Espera de 40 segundos");
+                Log.i(TAG, "Espera de 20 segundos");
 
                 EditText NumeroBOffNet = findViewById(R.id.NumeroB_Off_Net);
                 if (!NumeroBOffNet.getText().toString().equals("")) {
@@ -192,11 +192,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
                     callIntent.setData(Uri.parse(uri));
                     startActivity(callIntent);
                     Log.i(TAG, "Llamada OFFNET FIN");
-/*                    TextView dateViewOff = (TextView)findViewById(R.id.FechaFin);
-                    setDate(dateViewOff);*/
                 }
-
-
+                setDate(FechaFin);
                 //SMS
                 EditText NumeroBOnNetSms = findViewById(R.id.NumeroB_On_Net);
                 EditText NumeroBOffNetSms = findViewById(R.id.NumeroB_Off_Net);
@@ -211,9 +208,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
                     smsManager.sendTextMessage(num_telefono_off, null, message, null, null);
                     Toast.makeText(getApplicationContext(), "SMS OFF NET ENVIADO.", Toast.LENGTH_LONG).show();
 
-/*                    TextView dateViewSms = (TextView)findViewById(R.id.FechaFin);
-                    setDate(dateViewSms);*/
                 }
+                setDate(FechaFin);
                 //INTERNET
 
 
@@ -249,6 +245,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
 
             }
         });
+
 
     }
 
@@ -342,9 +339,11 @@ public class MainActivity<TAG> extends AppCompatActivity {
                                 .setContentText("All Download completed");
                 NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 notificationManager.notify(455, mBuilder.build());
-/*                TextView dateViewInt = (TextView)findViewById(R.id.FechaFin);
-                setDate(dateViewInt);*/
+                TextView FechaFinNavega = (TextView)findViewById(R.id.ShowFecFin);
+                setDate(FechaFinNavega);
+
             }
+
         }
     };
 
@@ -367,6 +366,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddhhmmss");//formating according to my need
         String date = formatter.format(today);
         view.setText(date);
+        Log.i(TAG, "poner fecha : " + date);
     }
 
 }
