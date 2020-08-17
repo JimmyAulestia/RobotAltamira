@@ -177,11 +177,11 @@ public class MainActivity<TAG> extends AppCompatActivity {
 
                 try {
                     Log.i(TAG, "Sleep iniciado");
-                    Thread.sleep(20000);
+                    Thread.sleep(40000);
                     Log.i(TAG, "Sleep finalizado");
                 } catch (Exception e) {
                 }
-                Log.i(TAG, "Espera de 20 segundos");
+                Log.i(TAG, "Espera de 40 segundos");
 
                 EditText NumeroBOffNet = findViewById(R.id.NumeroB_Off_Net);
                 if (!NumeroBOffNet.getText().toString().equals("")) {
