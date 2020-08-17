@@ -70,7 +70,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
         setupPermissions();
         Log.i(TAG, "INICIO PRUEBAS BASICAS");
 
-        /* LLAMADA ON NET */
+/*
+        *//* LLAMADA ON NET *//*
         button = (Button) findViewById(R.id.Boton_Llamada_numero_B_ON_Net);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
@@ -84,7 +85,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
                 }
             }
         });
-        /* LLAMADA OFF NET */
+        *//* LLAMADA OFF NET *//*
         button = (Button) findViewById(R.id.Boton_Llamada_numero_B_Off_Net);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
@@ -98,7 +99,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
                 }
             }
         });
-        /* SMS */
+        *//* SMS *//*
         button = (Button) findViewById(R.id.Boton_SMS_ON_OFF);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
@@ -116,7 +117,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
                 }
             }
         });
-        /* INTERNET */
+        *//* INTERNET *//*
 
 
         button = (Button) findViewById(R.id.Boton_INTERNET);
@@ -152,7 +153,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
                 }
 
             }
-        });
+        });*/
 
         /* PRUEBAS COMPLETAS */
 
@@ -207,7 +208,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "SMS ON NET ENVIADO..", Toast.LENGTH_LONG).show();
                     smsManager.sendTextMessage(num_telefono_off, null, message, null, null);
                     Toast.makeText(getApplicationContext(), "SMS OFF NET ENVIADO.", Toast.LENGTH_LONG).show();
-
+                    Log.i(TAG, "SMSs  FIN");
                 }
                 setDate(FechaFin);
                 //INTERNET
@@ -215,6 +216,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
 
                 Uri downloadURI = Uri.parse(url);
                 DownloadManager manager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+                Log.i(TAG, "INTERNET  INICIO");
                 try {
                     if (manager != null){
                         Log.e("ERROR:MAIN", "M: url a bajar "+ downloadURI);
@@ -240,6 +242,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
                     Log.e("ERROR:MAIN", "E: "+e.getMessage());
                 }
+                Log.i(TAG, "INTERNET  FIN");
 
 
 
