@@ -169,7 +169,6 @@ public class MainActivity<TAG> extends AppCompatActivity {
         BotonEstado.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 final String[] ESTADO = new String[1];
-                //TextView tv = findViewById(R.id.ViewResultados);
 
                 new AsyncTask<Integer, Void, Void>(){
                     @Override
@@ -190,6 +189,9 @@ public class MainActivity<TAG> extends AppCompatActivity {
                 }.execute(1);
             }
         });
+
+
+
 
 
     }
@@ -313,5 +315,4 @@ public class MainActivity<TAG> extends AppCompatActivity {
         view.setText(date);
         Log.i(TAG, "poner fecha : " + date);
     }
-
 }

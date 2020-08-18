@@ -15,7 +15,8 @@ public class SSHCommand {
             JSch jsch = new JSch();
             Session session = jsch.getSession(username, hostname, port);
             session.setPassword(password);
-
+            String comando1 = "source $HOME/.bash_profile && /usr/local/RobotAndroid/estado_general.py 962667025 PROD";
+            //String comando1 = Comando;
             // Avoid asking for key confirmation
             Properties prop = new Properties();
             prop.put("StrictHostKeyChecking", "no");
@@ -28,7 +29,7 @@ public class SSHCommand {
             channelssh.setOutputStream(baos);
 
             // Execute command
-            channelssh.setCommand("source $HOME/.bash_profile && /usr/local/RobotAndroid/estado_general.py 962667025 PROD");
+            channelssh.setCommand(comando1);
             channelssh.connect();
 
             InputStream commandOutput = channelssh.getInputStream();
