@@ -14,7 +14,6 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.util.Log;
 import androidx.core.app.ActivityCompat;
 
@@ -63,117 +62,31 @@ public class MainActivity<TAG> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //final String TAG = "LOG_PRUEBAS_BASICAS";
         downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
         registerReceiver(onComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
         Download_Uri = Uri.parse("http://ipv4.download.thinkbroadband.com/10MB.zip");
         setupPermissions();
         Log.i(TAG, "INICIO PRUEBAS BASICAS");
 
-/*
-        *//* LLAMADA ON NET *//*
-        button = (Button) findViewById(R.id.Boton_Llamada_numero_B_ON_Net);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                EditText NumeroBOnNet = findViewById(R.id.NumeroB_On_Net);
-                if (!NumeroBOnNet.getText().toString().equals("")) {
-                    String num_telefono = String.valueOf(NumeroBOnNet.getText().toString());
-                    String uri = "tel:" + num_telefono.trim() ;
-                    Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse(uri));
-                    startActivity(callIntent);
-                }
-            }
-        });
-        *//* LLAMADA OFF NET *//*
-        button = (Button) findViewById(R.id.Boton_Llamada_numero_B_Off_Net);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                EditText NumeroBOffNet = findViewById(R.id.NumeroB_Off_Net);
-                if (!NumeroBOffNet.getText().toString().equals("")) {
-                    String num_telefono = String.valueOf(NumeroBOffNet.getText().toString());
-                    String uri = "tel:" + num_telefono.trim() ;
-                    Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse(uri));
-                    startActivity(callIntent);
-                }
-            }
-        });
-        *//* SMS *//*
-        button = (Button) findViewById(R.id.Boton_SMS_ON_OFF);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                EditText NumeroBOnNet = findViewById(R.id.NumeroB_On_Net);
-                EditText NumeroBOffNet = findViewById(R.id.NumeroB_Off_Net);
-                if (!NumeroBOnNet.getText().toString().equals("")) {
-                    String num_telefono_on = String.valueOf(NumeroBOnNet.getText().toString());
-                    String num_telefono_off = String.valueOf(NumeroBOffNet.getText().toString());
-                    message = "Mensaje de Prueba Altamira";
-                    SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage(num_telefono_on, null, message, null, null);
-                    Toast.makeText(getApplicationContext(), "SMS ON NET ENVIADO..", Toast.LENGTH_LONG).show();
-                    smsManager.sendTextMessage(num_telefono_off, null, message, null, null);
-                    Toast.makeText(getApplicationContext(), "SMS OFF NET ENVIADO.", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-        *//* INTERNET *//*
-
-
-        button = (Button) findViewById(R.id.Boton_INTERNET);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Log.i(TAG, "INICIO PRUEBA INTERNET MANUAL");
-                Uri downloadURI = Uri.parse(url);
-                DownloadManager manager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
-                try {
-                    if (manager != null){
-                        Log.e("ERROR:MAIN", "M: url a bajar "+ downloadURI);
-                        DownloadManager.Request request = new DownloadManager.Request(downloadURI);
-                        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE)
-                                .setTitle(fileName)
-                                .setDescription("Downloading"+fileName)
-                                .setAllowedOverMetered(true)
-                                .setAllowedOverRoaming(true)
-                                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,fileName)
-                                .setMimeType(getMimeType(downloadURI));
-                        Log.e("ERROR:MAIN", "M: " + Environment.DIRECTORY_DOWNLOADS + " | " +fileName);
-                        manager.enqueue(request);
-
-                        Toast.makeText(MainActivity.this,"Download Started!",Toast.LENGTH_SHORT).show();
-
-                    }else{
-                        Intent intent = new Intent(Intent.ACTION_VIEW, downloadURI);
-                        startActivity(intent);
-                    }
-                }catch (Exception e) {
-                    Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-                    Log.e("ERROR:MAIN", "E: "+e.getMessage());
-                }
-
-            }
-        });*/
-
         /* PRUEBAS COMPLETAS */
 
         ButtonPrueba = (Button) findViewById(R.id.Boton_prueba);
         ButtonPrueba.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                TextView FechaInicio = (TextView)findViewById(R.id.ShowFecInicio);
+                TextView FechaInicio = (TextView)findViewById(R.id.SetFechaInicio);
                 setDate(FechaInicio);
-                TextView FechaFin = (TextView)findViewById(R.id.ShowFecFin);
+                TextView FechaFin = (TextView)findViewById(R.id.SetFechaFin);
 
                 //LLAMADAS
-                EditText NumeroBOnNet = findViewById(R.id.NumeroB_On_Net);
+                EditText NumeroBOnNet = findViewById(R.id.SetNumeroBOnNet);
                 if (!NumeroBOnNet.getText().toString().equals("")) {
-                    Log.i(TAG, "Llamada ONNET INICIO");
+                    Log.i(TAG, "LLAMADA ONNET INICIO");
                     String num_telefono = String.valueOf(NumeroBOnNet.getText().toString());
                     String uri = "tel:" + num_telefono.trim() ;
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
                     callIntent.setData(Uri.parse(uri));
                     startActivity(callIntent);
-                    Log.i(TAG, "Llamada ONNET FIN");
+                    Log.i(TAG, "LLAMADA ONNET FIN");
                 }
 
                 try {
@@ -184,7 +97,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
                 }
                 Log.i(TAG, "Espera de 40 segundos");
 
-                EditText NumeroBOffNet = findViewById(R.id.NumeroB_Off_Net);
+                EditText NumeroBOffNet = findViewById(R.id.SetNumeroBOffNet);
                 if (!NumeroBOffNet.getText().toString().equals("")) {
                     Log.i(TAG, "Llamada OFFNET INICIO");
                     String num_telefono = String.valueOf(NumeroBOffNet.getText().toString());
@@ -196,8 +109,8 @@ public class MainActivity<TAG> extends AppCompatActivity {
                 }
                 setDate(FechaFin);
                 //SMS
-                EditText NumeroBOnNetSms = findViewById(R.id.NumeroB_On_Net);
-                EditText NumeroBOffNetSms = findViewById(R.id.NumeroB_Off_Net);
+                EditText NumeroBOnNetSms = findViewById(R.id.SetNumeroBOnNet);
+                EditText NumeroBOffNetSms = findViewById(R.id.SetNumeroBOffNet);
                 if (!NumeroBOnNet.getText().toString().equals("")) {
                     Log.i(TAG, "SMSs  INICIO");
                     String num_telefono_on = String.valueOf(NumeroBOnNetSms.getText().toString());
@@ -342,7 +255,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
                                 .setContentText("All Download completed");
                 NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                 notificationManager.notify(455, mBuilder.build());
-                TextView FechaFinNavega = (TextView)findViewById(R.id.ShowFecFin);
+                TextView FechaFinNavega = (TextView)findViewById(R.id.SetFechaFin);
                 setDate(FechaFinNavega);
 
             }

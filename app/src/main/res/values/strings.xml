@@ -9,8 +9,9 @@
     <string name="Llamada_numero_B_Off_Net">Llamada Off Net</string>
     <string name="sms_on_off">Envio SMS</string>
     <string name="internet">Uso Internet</string>
-    <string name="Boton_prueba">Pruebas Basicas</string>
-    <string name="boton_estado">Estado Abonado</string>
+    <string name="Boton_prueba">PRUEBAS BASICAS</string>
+    <string name="boton_estado">ESTADO ABONADO</string>
     <string name="fec_inicio">Fecha Inicio</string>
     <string name="fec_fin">Fecha Fin</string>
+    <string name="BtnResultadoStr">RESULTADO PRUEBAS</string>
 </resources>

@@ -6,250 +6,274 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-
-    <Button
-        android:id="@+id/Boton_SMS_ON_OFF"
+    <LinearLayout
+        android:id="@+id/Row1"
         android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="8dp"
-        android:background="#919191"
-        android:text="@string/sms_on_off"
-        android:textColor="#120D0D"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/Boton_INTERNET"
-        app:layout_constraintTop_toBottomOf="@+id/Boton_Llamada_numero_B_ON_Net" />
-
-    <Button
-        android:id="@+id/Boton_Llamada_numero_B_ON_Net"
-        android:layout_width="0dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="230dp"
-        android:background="#919191"
-        android:text="@string/Llamada_numero_B_ON_Net"
-        android:textColor="#120D0D"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Boton_SMS_ON_OFF"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-
-    <Button
-        android:id="@+id/Boton_Llamada_numero_B_Off_Net"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="8dp"
-        android:background="#919191"
-        android:text="@string/Llamada_numero_B_Off_Net"
-        android:textColor="#120D0D"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/Boton_INTERNET" />
-
-    <Button
-        android:id="@+id/Boton_INTERNET"
-        android:layout_width="0dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="8dp"
-        android:background="#919191"
-        android:text="@string/internet"
-        android:textColor="#120D0D"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/Boton_Llamada_numero_B_Off_Net"
-        app:layout_constraintTop_toBottomOf="@+id/Boton_SMS_ON_OFF" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20190024" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ViewNumeroBOnNet"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingreso_NumeroB_On_Net"
+            android:textAlignment="viewStart"
+            android:textColor="#1C1111"
+            android:textColorHint="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/SetNumeroBOnNet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Row2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Row1">
+
+        <TextView
+            android:id="@+id/ViewNumeroBOffNet"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingreso_NumeroB_Off_Net"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/SetNumeroBOffNet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Row3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Row2">
+
+        <TextView
+            android:id="@+id/ViewNumeroBInt"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingreso_NumeroB_Internacional"
+            android:textAlignment="viewStart"
+            android:textColor="#1C1111"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/SetNumeroBInt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Row4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Row3">
+
+        <TextView
+            android:id="@+id/ViewNumeroRobot"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingreso_NumeroA"
+            android:textAlignment="viewStart"
+            android:textColor="#1C1111"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/SetNumeroRobot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Row5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Row4">
+
+        <TextView
+            android:id="@+id/ViewFechaInicio"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fec_inicio"
+            android:textAlignment="viewStart"
+            android:textColor="#1C1111"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/SetFechaInicio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Row6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Row5">
+
+        <TextView
+            android:id="@+id/ViewFechaFin"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fec_fin"
+            android:textAlignment="viewStart"
+            android:textColor="#1C1111"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/SetFechaFin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/estado"
-        android:layout_width="111dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="123dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
         android:text="@string/boton_estado"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/Boton_prueba" />
+        app:layout_constraintEnd_toStartOf="@+id/Boton_prueba"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/Boton_prueba"
-        android:layout_width="109dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:text="@string/Boton_prueba"
-        app:layout_constraintStart_toStartOf="@+id/estado"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintEnd_toStartOf="@+id/Btn_Resultado"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/estado"
+        app:layout_constraintTop_toTopOf="@+id/estado" />
+
+    <Button
+        android:id="@+id/Btn_Resultado"
+        android:layout_width="109dp"
+        android:layout_height="58dp"
+        android:text="@string/BtnResultadoStr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Boton_prueba"
+        app:layout_constraintTop_toTopOf="@+id/Boton_prueba" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.79097384" />
+        android:layout_marginBottom="233dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="285dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="491dp" />
+        app:layout_constraintGuide_begin="375dp" />
 
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border">
-
-            <TextView
-                android:id="@+id/NumeroBOnVista"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:text="@string/Ingreso_NumeroB_On_Net"
-                android:textColor="#1C1111" />
-
-            <EditText
-                android:id="@+id/NumeroB_On_Net"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:hint="@string/Ingreso_NumeroB_On_Net"
-                android:inputType="number"
-                android:textColor="#1C1111" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border">
-
-            <TextView
-                android:id="@+id/NumeroBOffVista"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:text="@string/Ingreso_NumeroB_Off_Net"
-                android:textColor="#1C1111" />
-
-            <EditText
-                android:id="@+id/NumeroB_Off_Net"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:hint="@string/Ingreso_NumeroB_Off_Net"
-                android:inputType="number"
-                android:textColor="#1C1111" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border">
-
-            <TextView
-                android:id="@+id/NumeroBInt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:text="@string/Ingreso_NumeroB_Internacional"
-                android:textColor="#1C1111" />
-
-            <EditText
-                android:id="@+id/NumeroB_Internacional"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:hint="@string/Ingreso_NumeroB_Internacional"
-                android:inputType="number"
-                android:textColor="#1C1111" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border">
-
-            <TextView
-                android:id="@+id/NumeroRobot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:text="@string/Ingreso_NumeroA"
-                android:textColor="#1C1111" />
-
-            <EditText
-                android:id="@+id/SetNumeroRobot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:hint="@string/Ingreso_NumeroA"
-                android:inputType="number"
-                android:textColor="#1C1111" />
-
-
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border">
-
-            <TextView
-                android:id="@+id/fec_inicio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:text="@string/fec_inicio"
-                android:textColor="#1C1111" />
-
-            <EditText
-                 android:id="@+id/ShowFecInicio"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:background="@drawable/border"
-                 android:inputType="number"
-                 android:textColor="#1C1111" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border">
-
-            <TextView
-                android:id="@+id/fec_fin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:text="@string/fec_fin"
-                android:textColor="#1C1111" />
-
-            <EditText
-                android:id="@+id/ShowFecFin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border"
-                android:inputType="number"
-                android:textColor="#1C1111" />
-
-        </TableRow>
-
-    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
