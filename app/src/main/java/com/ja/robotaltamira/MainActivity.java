@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IntentFilter;
+import android.os.AsyncTask;
 import android.os.Bundle;
 /* PERMISOS */
 import androidx.core.app.NotificationCompat;
@@ -14,6 +15,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Environment;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import androidx.core.app.ActivityCompat;
 
@@ -54,6 +56,7 @@ public class MainActivity<TAG> extends AppCompatActivity {
     private static final int WRIINT_REQUEST_CODE = 105;
     private Button button;
     private Button ButtonPrueba;
+    private Button BotonEstado;
     String message;
 
 
@@ -159,6 +162,32 @@ public class MainActivity<TAG> extends AppCompatActivity {
 
 
 
+            }
+        });
+
+        BotonEstado = (Button) findViewById(R.id.BtnEstado);
+        BotonEstado.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                final String[] ESTADO = new String[1];
+                //TextView tv = findViewById(R.id.ViewResultados);
+
+                new AsyncTask<Integer, Void, Void>(){
+                    @Override
+                    protected Void doInBackground(Integer... params) {
+                        try {
+                            ESTADO[0] = SSHCommand.executeRemoteCommand("portalaa", "Eko_2017", "10.112.156.27", 22);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        return null;
+                    }
+                    @Override
+                    protected void onPostExecute(Void unused) {
+                        TextView textView1_2 = (TextView)findViewById(R.id.ViewResultados);
+                        textView1_2.setText(ESTADO[0]);
+                        textView1_2.setMovementMethod(new ScrollingMovementMethod());
+                    }
+                }.execute(1);
             }
         });
 

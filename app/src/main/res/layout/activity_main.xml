@@ -11,13 +11,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -30,18 +28,19 @@
             android:textAlignment="viewStart"
             android:textColor="#1C1111"
             android:textColorHint="@android:color/black"
-            android:textSize="12sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/SetNumeroBOnNet"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#CDDC39"
             android:inputType="number"
-            android:textAlignment="viewStart"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="12dp" />
+            android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -49,7 +48,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         android:paddingLeft="40dp"
@@ -60,23 +58,25 @@
 
         <TextView
             android:id="@+id/ViewNumeroBOffNet"
-            android:layout_width="107dp"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/Ingreso_NumeroB_Off_Net"
             android:textAlignment="viewStart"
             android:textColor="@android:color/black"
-            android:textSize="12sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/SetNumeroBOffNet"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#CDDC39"
             android:inputType="number"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 
@@ -85,7 +85,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         android:paddingLeft="40dp"
@@ -102,17 +101,19 @@
             android:text="@string/Ingreso_NumeroB_Internacional"
             android:textAlignment="viewStart"
             android:textColor="#1C1111"
-            android:textSize="12sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/SetNumeroBInt"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#CDDC39"
             android:inputType="number"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="12dp" />
+            android:textSize="14sp" />
 
 
     </LinearLayout>
@@ -122,7 +123,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         android:paddingLeft="40dp"
@@ -139,18 +139,19 @@
             android:text="@string/Ingreso_NumeroA"
             android:textAlignment="viewStart"
             android:textColor="#1C1111"
-            android:textSize="12sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/SetNumeroRobot"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#CDDC39"
             android:inputType="number"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -158,7 +159,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         android:paddingLeft="40dp"
@@ -175,17 +175,19 @@
             android:text="@string/fec_inicio"
             android:textAlignment="viewStart"
             android:textColor="#1C1111"
-            android:textSize="12sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/SetFechaInicio"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#CDDC39"
             android:inputType="number"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 
@@ -194,7 +196,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         android:paddingLeft="40dp"
@@ -211,24 +212,26 @@
             android:text="@string/fec_fin"
             android:textAlignment="viewStart"
             android:textColor="#1C1111"
-            android:textSize="12sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/SetFechaFin"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#CDDC39"
             android:inputType="number"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="12dp" />
+            android:textSize="14sp" />
 
 
     </LinearLayout>
 
 
     <Button
-        android:id="@+id/estado"
+        android:id="@+id/BtnEstado"
         android:layout_width="123dp"
         android:layout_height="58dp"
         android:layout_marginTop="16dp"
@@ -246,8 +249,8 @@
         android:text="@string/Boton_prueba"
         app:layout_constraintEnd_toStartOf="@+id/Btn_Resultado"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/estado"
-        app:layout_constraintTop_toTopOf="@+id/estado" />
+        app:layout_constraintStart_toEndOf="@+id/BtnEstado"
+        app:layout_constraintTop_toTopOf="@+id/BtnEstado" />
 
     <Button
         android:id="@+id/Btn_Resultado"
@@ -266,14 +269,32 @@
         android:layout_marginBottom="233dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_begin="285dp" />
+        app:layout_constraintGuide_begin="169dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="375dp" />
+        app:layout_constraintGuide_percent="0.43" />
+
+    <TextView
+        android:id="@+id/ViewResultados"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#A5B4B6"
+        android:text="##### Pruebas Altamira ####"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        android:scrollbars = "vertical"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
